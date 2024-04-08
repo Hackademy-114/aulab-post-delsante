@@ -10,7 +10,9 @@
         "laravel/fortify": "^1.20",
         "laravel/framework": "^10.10",
         "laravel/sanctum": "^3.3",
-        "laravel/tinker": "^2.8"
+        "laravel/scout": "*",
+        "laravel/tinker": "^2.8",
+        "teamtnt/laravel-scout-tntsearch-driver": "*"
     },
     "require-dev": {
         "barryvdh/laravel-ide-helper": "*",

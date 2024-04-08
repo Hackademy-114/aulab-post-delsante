@@ -23,10 +23,4 @@ class DatabaseSeeder extends Seeder
 } 
 
 
-    $user = User::create([
-        'name' => 'Admin',
-        'email' => 'admin@theaulabpost.it',
-        'password' => bcrypt('12345678'),
-        'is_admin' => true,
-    ]);
 

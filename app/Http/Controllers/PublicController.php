@@ -68,4 +68,20 @@ class PublicController extends Controller
 
         return redirect(route('homepage'))->with('message', 'Grazie per averci contattato!');
     }
+
+    public function contactsSubmit(Request $request)
+    {
+        $request->validate([
+            'email' => 'required|email',
+            'message' => 'required'
+        ]);
+
+        $role = 0;
+        $email = $request->email;
+        $message = $request->message;
+
+        Mail::to('admin@theaulabpost.it')->send(new CareerRequestMail(compact('email', 'message', 'role')));
+
+        return redirect(route('homepage'))->with('message', 'Grazie per averci contattato!');
+    }
 }

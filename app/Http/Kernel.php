@@ -12,7 +12,7 @@ class Kernel extends HttpKernel
         
         'admin' => \App\Http\Middleware\UserIsAdmin::class,
         'revisor' => \App\Http\Middleware\UserIsRevisor::class,
-        // 'writer' => \App\Http\Middleware\UserIsWriter::class,
+        'writer' => \App\Http\Middleware\UserIsWriter::class,
     ];
 
     /**
